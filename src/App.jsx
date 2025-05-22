@@ -1,38 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
+import Product from './product'; // Adjust path if needed
+import Cart from './cart';       // Adjust path if needed
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-       <div>
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="App">
         <header>
           <h1>My Online Shop</h1>
-          <Link to="/">Home</Link>-
-          <Link to="/cart">Cart</Link>
+          <nav>
+            <Link to="/">Home</Link> | <Link to="/cart">Cart</Link>
+          </nav>
           <hr />
         </header>
 
         <main>
           <Routes>
-            <Route index element={<Product />} />
-            <Route path="/" element={<Product/>}></Route>
-            <Route path="/cart" element={<Cart/>}></Route>
+            <Route path="/" element={<Product />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </main>
 
         <footer>
           <hr />
-          &copy; 2005. All rights Reserved.
+          &copy; 2025. All rights reserved.
         </footer>
-      </BrowserRouter>
-    </div>
-    </>
-  )
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
+
+
