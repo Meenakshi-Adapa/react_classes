@@ -1,24 +1,28 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import Product from './product'; // Adjust path if needed
-import Cart from './cart';       // Adjust path if needed
+import App1 from './components/App1'; // Adjust path if needed
+import App2 from './components/App2';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <header>
-          <h1>My Online Shop</h1>
+          <h1>My React Classes</h1>
           <nav>
-            <Link to="/">Home</Link> | <Link to="/cart">Cart</Link>
+            
+            <Link to="/app1">App1</Link> - 
+            <Link to="/app2">App2</Link>
           </nav>
           <hr />
         </header>
 
         <main>
           <Routes>
-            <Route path="/" element={<Product />} />
-            <Route path="/cart" element={<Cart />} />
+
+            <Route path="/app1" element={<App1 />} />
+            <Route path="/app2" element={<App2 />} />
+
           </Routes>
         </main>
 
