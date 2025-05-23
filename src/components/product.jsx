@@ -1,9 +1,9 @@
 // src/Product.jsx
-function Product() {
+function Product(items) {
+  const desc = "This is a product component";
   return (
     <div>
-      <h2>Product Page</h2>
-      <p>Here are some products.</p>
+      {desc} - {items.name},{items.price}
     </div>
   );
 }

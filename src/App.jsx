@@ -2,21 +2,15 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import App1 from './components/App1'; // Adjust path if needed
 import App2 from './components/App2';
+import Header from './components/header'; // Adjust path if needed
+import Footer from './components/footer';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <header>
-          <h1>My React Classes</h1>
-          <nav>
-            
-            <Link to="/app1">App1</Link> - 
-            <Link to="/app2">App2</Link>
-          </nav>
-          <hr />
-        </header>
-
+      
+        <Header />
         <main>
           <Routes>
 
@@ -25,11 +19,8 @@ function App() {
 
           </Routes>
         </main>
-
-        <footer>
-          <hr />
-          &copy; 2025. All rights reserved.
-        </footer>
+      <Footer/>
+        
       </div>
     </BrowserRouter>
   );
