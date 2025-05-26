@@ -1,11 +1,8 @@
-// src/Product.jsx
-function Product(items) {
-  const desc = "This is a product component";
+export default function Product({ name, price }) {
   return (
-    <div>
-      {desc} - {items.name},{items.price}
+    <div className="product">
+      <p>{name} - ${price}</p>
     </div>
   );
 }
 
-export default Product;

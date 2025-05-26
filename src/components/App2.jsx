@@ -1,5 +1,5 @@
-import "./App2.css";
-
+import "./styles/App2.css";
+import Product from "./product";
 export default function App2() {
   const product = [
     { id: 1, name: 'Product 1', price: 100 },
@@ -13,15 +13,11 @@ export default function App2() {
       <div>
         <h1>This is App2</h1>
       </div>
-      <div class="Product-list">
+      <div className="Product-list">
     
           { 
             product.map(value => (
-              <div class="Product-box" key={value.id}>
-                <h1> {value.name}</h1> 
-                {value.price}
-                <div><button>Add to Cart</button></div>
-              </div>
+             <Product  key={value.id} {...value} />
             ))
           }
      

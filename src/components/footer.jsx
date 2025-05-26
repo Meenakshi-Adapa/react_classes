@@ -1,7 +1,7 @@
-import './footer.css';
+import './styles/footer.css';
 export default function Footer() {
   return (
-    <footer class="footer">
+    <footer className="footer">
       <p>My React Classes &copy; 2023 All rights reserved.</p>
       
     </footer>
